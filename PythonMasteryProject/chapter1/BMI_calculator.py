@@ -3,9 +3,14 @@
 
 # getting user input as height and weight
 def get_user_input():
-    weight = float(input("Enter your weight (kg): "))
-    height = float(input("enter your height (m): "))
-    return weight, height
+    while True:
+        try:
+            weight = float(input("Enter your weight (kg): "))
+            height = float(input("Enter your height (m): "))
+        except ValueError:
+            print("please just enter the digits")
+        else:
+            return weight, height
 
 
 #  calculate bmi
