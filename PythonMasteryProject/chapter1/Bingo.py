@@ -15,7 +15,7 @@ def generate_random_num():
 
 # get user input as guess
 def get_user_input():
-    print("Your number should be between f{MIn_num}-{MAX_num}")
+    print(f"Your number should be between {MIN_num} to {MAX_num}")
     while True:
         try:
             user_input = int(input("Enter your guess: "))
@@ -31,6 +31,7 @@ def check_guessed_num(user_input , random_num):
 
 # main function for running application
 def main():
+    Max_guess_counts = 3
     random_num = generate_random_num()
     print(f" random number is {random_num}.")
     while Max_guess_counts > 0:
